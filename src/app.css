@@ -14,10 +14,11 @@ body {
 	padding: 0;
 }
 
-.app {
+container {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	overflow-y: auto;
 }
 
 header {
@@ -31,6 +32,7 @@ header {
 
 .logo-container {
 	display: flex;
+	background-color: transparent;
 	align-items: center;
 	margin-right: 2rem;
 }
@@ -39,7 +41,6 @@ header {
 	height: 40px;
 	width: 40px;
 	margin-right: 0.5rem;
-	background-color: #fff;
 	/* Placeholder for the actual logo */
 }
 

@@ -9,7 +9,7 @@
 	let { children } = $props();
 </script>
 
-<div class="app">
+<container>
 	<header>
 		<div class="logo-container">
 			<div class="logo"></div>
@@ -24,7 +24,7 @@
 	<footer>
 		<p>© 2024 TrasherDK</p>
 	</footer>
-</div>
+</container>
 
 <style>
 	/* Empty */
