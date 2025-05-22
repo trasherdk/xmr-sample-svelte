@@ -1,0 +1,15 @@
+@import 'open-props/normalize.min.css';
+@import 'open-props/open-props.min.css';
+@import 'open-props/colors-hsl.min.css';
+@import 'open-props/animations.min.css';
+:root {
+  /* You can override or extend props here */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Example: override props for dark mode */
+    --surface-1: var(--gray-9);
+    --text-1: var(--gray-0);
+  }
+}

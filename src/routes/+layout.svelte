@@ -1,5 +1,12 @@
-<script>
+<script lang="ts">
+	import { browser } from '$app/environment';
+	import '$lib/styles/theme.css'
 	import '../app.css';
+
+	if (browser) {
+		document.body.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)')
+		.matches ? 'dark' : 'light');
+	}
 	/**
 	 * @typedef {Object} Props
 	 * @property {import('svelte').Snippet} [children]
