@@ -9,6 +9,7 @@ package-lock.json
 /.svelte-kit
 /build
 /dist
+/public
 
 # OS
 .DS_Store
