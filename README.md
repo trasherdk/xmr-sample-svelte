@@ -4,6 +4,30 @@ Everything you need to build a Svelte library, powered by [`create-svelte`](http
 
 Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
 
+## 📚 Svelte 5 Reference
+
+This project uses **Svelte 5** with the new runes system. For complete documentation and examples, see [`SVELTE_5_COMPLETE_REFERENCE.md`](./SVELTE_5_COMPLETE_REFERENCE.md) - your always-available Svelte 5 guide covering:
+
+- 🎯 Runes system (`$state`, `$derived`, `$effect`, `$props`)
+- 🎭 New event handling syntax
+- 🧩 Snippets (replacing slots)
+- 🌍 Shared state management
+- 🎨 Dynamic components
+- 🔍 Debugging with `$inspect`
+- 📦 Migration guide from Svelte 4
+
+Quick example:
+```svelte
+<script>
+  let count = $state(0);
+  let doubled = $derived(count * 2);
+</script>
+
+<button onclick={() => count++}>
+  Count: {count}, Doubled: {doubled}
+</button>
+```
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
