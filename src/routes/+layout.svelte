@@ -19,10 +19,11 @@
 	});
 
 	$effect(() => {
-		document.body.setAttribute('data-theme', userContext.theme);
-		document.body.style.setProperty('--color-scheme', userContext.theme);
-		themeStore.value = userContext.theme;
-		console.log('userContext.theme', userContext.theme);
+		const theme = userContext.theme;
+		document.body.setAttribute('data-theme', theme);
+		document.body.style.setProperty('--color-scheme', theme);
+		themeStore.value = theme;
+		console.log('userContext.theme', theme);
 	});
 
 	setContext('UserContext', userContext);
