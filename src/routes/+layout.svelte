@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { setContext } from 'svelte';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
+	import { RenderScan } from 'svelte-render-scan';
 	import '$lib/styles/theme.css';
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import LocalStorage from '$lib/utils/localstorage.svelte';
+
+	let themeStore: LocalStorage;
 
 	/**
 	 * @typedef {Object} UserContext
 	 * @property {string} user
 	 * @property {string} theme
 	 */
-
-	let themeStore: LocalStorage;
 	let userContext = $state({
 		user: null,
 		theme: ''
@@ -41,11 +42,14 @@
 	 */
 
 	/** @type {Props} */
-	let { children } = $props();
+	let { data, children } = $props();
 </script>
 
 <container>
 	<Header />
+	{#if dev}
+		<RenderScan />
+	{/if}
 	<main>
 		{@render children?.()}
 	</main>
