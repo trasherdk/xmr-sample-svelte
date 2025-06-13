@@ -40,6 +40,7 @@
 
 	label span {
 		display: none;
+		cursor: pointer;
 	}
 
 	input[type='radio']:not(:checked) + span {
