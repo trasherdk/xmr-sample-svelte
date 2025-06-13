@@ -50,11 +50,8 @@
   --text-9: var(--gray-8);
 }
 
-/*
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: var(--color-scheme);
-
     --surface-1: var(--gray-9);
     --surface-2: var(--gray-8);
     --surface-3: var(--gray-7);
@@ -74,4 +71,3 @@
     --text-9: var(--gray-8);
   }
 }
-*/
