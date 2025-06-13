@@ -3,22 +3,16 @@
 	import { SunIcon, MoonIcon } from 'svelte-feather-icons';
 
 	let userContext = getContext('UserContext') as { theme: string };
-	let theme = $state(userContext.theme);
-
-	$effect(() => {
-		userContext.theme = theme;
-		console.log('userContext.theme', userContext.theme);
-	});
 </script>
 
 <div class="theme-toggle">
 	<fieldset>
 		<label>
-			<input type="radio" name="theme" value="dark" bind:group={theme} />
+			<input type="radio" name="theme" value="dark" bind:group={userContext.theme} />
 			<span><MoonIcon /></span>
 		</label>
 		<label>
-			<input type="radio" name="theme" value="light" bind:group={theme} />
+			<input type="radio" name="theme" value="light" bind:group={userContext.theme} />
 			<span><SunIcon /></span>
 		</label>
 	</fieldset>

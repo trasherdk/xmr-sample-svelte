@@ -24,7 +24,7 @@
 		document.body.setAttribute('data-theme', theme);
 		document.body.style.setProperty('--color-scheme', theme);
 		themeStore.value = theme;
-		console.log('userContext.theme', theme);
+		console.log('+layout: userContext.theme', theme);
 	});
 
 	setContext('UserContext', userContext);
